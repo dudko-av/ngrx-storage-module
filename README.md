@@ -1,6 +1,8 @@
 # ngrx-storage-module
+
 # Example
 
+```ts
 import { Injectable } from '@angular/core';
 import { Reducer } from '../app-storage-module/reducer.decorator';
 import { DefaultReducer } from '../app-storage-module/default-reducer/default-reducer.service';
@@ -29,3 +31,4 @@ export const appProviders = [
     useFactory: initialiseStoreService,
     deps: [Injector] }
 ];
+```
