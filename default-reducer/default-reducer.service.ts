@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 @Injectable()
-export class DefaultReducerService {
+export class DefaultReducer {
   name: string;
 
   constructor(private store: Store<any>) {
