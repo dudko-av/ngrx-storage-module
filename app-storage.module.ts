@@ -7,7 +7,7 @@ import { DefaultReducer } from './default-reducer/default-reducer.service';
 export function initialiseService(injector: Injector, service) {
   const sv = ReflectiveInjector.resolveAndCreate([service], injector).get(service);
   Object.keys(appStateType).forEach(reducerName => {
-    const reducer: DefaultReducer = ReflectiveInjector
+    const reducer: DefaultReducer<any> = ReflectiveInjector
       .resolveAndCreate([appStateType[reducerName]], injector)
       .get(appStateType[reducerName]);
     reducer.name = reducerName;
